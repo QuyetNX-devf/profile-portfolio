@@ -26,7 +26,7 @@ export default function Contact() {
     <section className="container mx-auto py-20">
       <div className="flex flex-col lg:flex-row gap-[30px]">
         <div className="order-2 lg:order-none">
-          <div className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+          <div className="flex flex-col gap-6 py-10 px-4 lg:px-10 bg-[#27272c] rounded-xl">
             <h3 className="text-3xl text-accent">{"Let's work together"}</h3>
             <p className="text-white/60">
               We believe that collaboration will lead to innovative and

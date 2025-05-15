@@ -1,28 +1,27 @@
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-  FaGithub,
-} from "react-icons/fa";
-import {
-  SiTailwindcss,
-  SiNextdotjs,
-  SiExpress,
-  SiMongodb,
-  SiAdobephotoshop,
-} from "react-icons/si";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Tooltip,
-  TooltipTrigger,
   TooltipContent,
   TooltipProvider,
+  TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { seoHead } from "@/utils/seoHead";
+import {
+  FaCss3,
+  FaFigma,
+  FaGithub,
+  FaHtml5,
+  FaJs,
+  FaNodeJs,
+  FaReact,
+} from "react-icons/fa";
+import {
+  SiAdobephotoshop,
+  SiExpress,
+  SiMongodb,
+  SiNextdotjs,
+  SiTailwindcss,
+} from "react-icons/si";
 
 //about data
 const about = {
@@ -204,25 +203,24 @@ const Resume = () => {
               <p className="text-white/60 max-w-[500px] lg:max-w-screen mx-auto lg:mx-0">
                 {experience.description}
               </p>
-              <ScrollArea className="h-[400px] mt-8">
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
-                  {experience.items.map((item, index) => (
-                    <li
-                      key={index}
-                      className="bg-[#232329] py-6 px-10 rounded-xl"
-                    >
-                      <span className="text-accent">{item.duration}</span>
-                      <h3 className="text-[16px] font-bold mb-4">
-                        {item.position}
-                      </h3>
-                      <div className="flex items-center justify-center lg:justify-start gap-x-3">
-                        <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                        <p>{item.company}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </ScrollArea>
+
+              <ul className="grid grid-cols-1 mt-8 md:grid-cols-2 gap-[30px]">
+                {experience.items.map((item, index) => (
+                  <li
+                    key={index}
+                    className="bg-[#232329] py-6 px-10 rounded-xl"
+                  >
+                    <span className="text-accent">{item.duration}</span>
+                    <h3 className="text-[16px] font-bold mb-4">
+                      {item.position}
+                    </h3>
+                    <div className="flex items-center justify-center lg:justify-start gap-x-3">
+                      <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                      <p>{item.company}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </TabsContent>
           <TabsContent value={tabVlues.education}>
@@ -231,27 +229,26 @@ const Resume = () => {
               <p className="text-white/60 max-w-[500px] lg:max-w-screen mx-auto lg:mx-0">
                 {education.description}
               </p>
-              <ScrollArea className="h-[400px] mt-8">
-                <ul className="grid grid-cols-1 gap-[30px]">
-                  {education.items.map((item, index) => (
-                    <li
-                      key={index}
-                      className="bg-[#232329] py-6 px-10 rounded-xl"
-                    >
-                      <span className="text-accent">{item.duration}</span>
-                      <h3 className="text-[16px] font-bold mb-4">
-                        {item.institution}
-                      </h3>
-                      <div className="flex items-center justify-center lg:justify-start gap-x-3">
-                        <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                        <p className="text-white/50 leading-snug">
-                          {item.degree}
-                        </p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </ScrollArea>
+
+              <ul className="grid mt-8 grid-cols-1 gap-[30px]">
+                {education.items.map((item, index) => (
+                  <li
+                    key={index}
+                    className="bg-[#232329] py-6 px-10 rounded-xl"
+                  >
+                    <span className="text-accent">{item.duration}</span>
+                    <h3 className="text-[16px] font-bold mb-4">
+                      {item.institution}
+                    </h3>
+                    <div className="flex items-center justify-center lg:justify-start gap-x-3">
+                      <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                      <p className="text-white/50 leading-snug">
+                        {item.degree}
+                      </p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           </TabsContent>
           <TabsContent value={tabVlues.skills}>

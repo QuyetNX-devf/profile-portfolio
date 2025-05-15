@@ -14,7 +14,7 @@ export const ButtonDownload = ({
     <Button
       className={className}
       onClick={() =>
-        window.open("/assets/cv/Nguyen-Xuan-Quyet-Fe-DW.pdf", "_blank")
+        window.open("/assets/cv/Nguyen-Xuan-Quyet-FE.pdf", "_blank")
       }
     >
       {text}
