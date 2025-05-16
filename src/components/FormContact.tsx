@@ -19,12 +19,14 @@ import { Textarea } from "./ui/textarea";
 const phoneRegExp = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
 
 const validationSchema = Yup.object({
-  firstname: Yup.string().required("Bắt buộc nhập"),
-  lastname: Yup.string().required("Bắt buộc nhập"),
+  firstname: Yup.string().required("First name is required"),
+  lastname: Yup.string().required("Last name is required"),
   phone: Yup.string()
-    .matches(phoneRegExp, "Số điện thoại không hợp lệ")
-    .required("Bắt buộc nhập"),
-  email: Yup.string().email("Email không hợp lệ").required("Bắt buộc nhập"),
+    .matches(phoneRegExp, "Invalid phone number")
+    .required("Phone number is required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
 });
 
 export const FormContact = () => {
